@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocky Evolutions - Zero Games Studio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1f14;
+      color: #dce5dd;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #122f1e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #80ffbf;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #dce5dd;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #80ffbf;
+    }
+
+    main {
+      padding-top: 6rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(to bottom, #1b3824, #122f1e);
+      padding: 6rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      color: #a8ffd7;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease;
+      font-weight: 900;
+      text-shadow: 2px 2px 4px #000;
+      letter-spacing: 2px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .personaje {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .personaje:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .personaje img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .descripcion {
+      flex: 1;
+      padding: 1rem 2rem;
+    }
+
+    .compania img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #122f1e;
+      text-align: center;
+      padding: 2rem;
+      color: #80ffbf;
+    }
+
+    .login {
+      background: #1c3c28;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .login input {
+      display: block;
+      margin: 1rem 0;
+      width: 100%;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #243f2e;
+      color: #fff;
+    }
+
+    .login button {
+      padding: 0.7rem 2rem;
+      background: #80ffbf;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #0f1f14;
+      transition: background 0.3s;
+    }
+
+    .login button:hover {
+      background: #a8ffd7;
+    }
+
+    .cookies {
+      display: none;
+      background-color: #1b3824;
+      color: #fff;
+      padding: 1.5rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+    }
+
+    .cookies button {
+      background-color: #80ffbf;
+      color: #0f1f14;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      margin-left: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .portada {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .portada img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rocky Evolutions</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#personajes">Personajes</a>
+      <a href="#lore">Lore</a>
+      <a href="#compania">Compañía</a>
+      <a href="#descarga">Descarga</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="portada">
+      <img src="portada2.jpg" alt="Imagen de portada del juego">
+    </div>
+
+    <section id="inicio" class="hero">
+      <h2>¿Preparado para nuevos horizontes?</h2>
+    </section>
+
+    <section id="lore">
+      <h2>Lore del Juego</h2>
+      <p>En las profundidades de una exuberante selva tropical, se oculta un mundo secreto lleno de criaturas únicas y misteriosas. En este universo, los animales no solo sobreviven, sino que evolucionan a través de sus experiencias, alianzas y batallas. Rocky, nuestro protagonista, se embarca en una aventura épica para descubrir su verdadero potencial, desentrañar los secretos de su linaje y salvar su hogar de una amenaza ancestral que ha despertado tras siglos de letargo.</p>
+    </section>
+
+    <section id="personajes">
+      <h2>Personajes</h2>
+      <div class="personaje">
+        <img src="murcielago.jpg" alt="Rocky" />
+        <div class="descripcion">
+          <h3>Rocky</h3>
+          <p>Rocky es un joven murciélago que destaca por su espíritu curioso, su inteligencia táctica y su inmenso deseo de proteger su hogar. A pesar de su tamaño modesto, Rocky ha demostrado ser un líder nato entre los suyos. Con habilidades de ecolocalización mejoradas y un agudo sentido de la orientación, está destinado a evolucionar en formas sorprendentes mientras crece y supera desafíos.</p>
+        </div>
+      </div>
+      <div class="personaje">
+        <img src="oso.jpg" alt="BearD" />
+        <div class="descripcion">
+          <h3>BearD</h3>
+          <p>BearD es un oso robusto, sabio y algo temperamental que actúa como mentor y protector de Rocky. Su fuerza física es incomparable, pero es su experiencia y conexión con los secretos del bosque lo que lo convierte en una figura clave en la historia. BearD ha visto cómo la selva ha cambiado con los años y está decidido a evitar que los errores del pasado se repitan. Junto a Rocky, enfrentará antiguos enemigos y descubrirá el poder de la verdadera evolución.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="compania" class="compania">
+      <h2>Sobre Zero Games Studio</h2>
+      <img src="logo.jpg" alt="Logo Zero Games Studio" />
+      <p>Zero Games Studio es un estudio indie fundado por un grupo de soñadores apasionados por contar historias y crear mundos envolventes. Nos especializamos en videojuegos con fuerte narrativa, mecánicas innovadoras y una estética única. Creemos que los videojuegos son una forma de arte capaz de inspirar, emocionar y conectar a las personas.</p>
+    </section>
+
+    <section id="descarga">
+      <h2>Descargar el Juego</h2>
+      <p>¡Haz clic abajo para descargar Rocky Evolutions y empezar tu aventura en una selva llena de misterios, peligros y evolución!</p>
+      <a href="#" style="background:#80ffbf; color:#0f1f14; padding:1rem 2rem; border-radius:10px; display:inline-block; font-weight:bold;">Descargar ahora</a>
+    </section>
+
+    <section class="login">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="usuario" placeholder="Usuario" />
+      <input type="password" id="clave" placeholder="Contraseña" />
+      <button onclick="iniciarSesion()">Ingresar</button>
+      <p id="mensajeLogin" style="color:#f88;"></p>
+    </section>
+  </main>
+
+  <div class="cookies" id="cookies">
+    <p>Este sitio usa cookies para garantizar una mejor experiencia de navegación.</p>
+    <button onclick="aceptarCookies()">Aceptar</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Zero Games Studio - Todos los derechos reservados.
+  </footer>
+
+  <script>
+    window.onload = function () {
+      if (!localStorage.getItem("cookiesAceptadas")) {
+        document.getElementById("cookies").style.display = "block";
+      }
+    };
+
+    function aceptarCookies() {
+      localStorage.setItem("cookiesAceptadas", "true");
+      document.getElementById("cookies").style.display = "none";
+    }
+
+    function iniciarSesion() {
+      const user = document.getElementById("usuario").value;
+      const pass = document.getElementById("clave").value;
+      const mensaje = document.getElementById("mensajeLogin");
+
+      if (user === "admin" && pass === "1234") {
+        mensaje.style.color = "#80ffbf";
+        mensaje.textContent = "¡Sesión iniciada correctamente!";
+        setTimeout(() => {
+          window.location.href = "admin.html";
+        }, 1500);
+      } else {
+        mensaje.style.color = "#f88";
+        mensaje.textContent = "Usuario o contraseña incorrectos.";
+      }
+    }
+  </script>
+</body>
+</html>
